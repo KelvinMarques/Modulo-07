@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'main/style.css' %}">
+    <!-- <link rel="stylesheet" type="text/css" href="style.css" media=”screen” /> -->
+
+    <title>Filmes</title>
+</head>
+<body>
+    <div class="main">
+        
+        {%for a in Films %}
+            <a href="/FilMixs/main/templates/" class="box">
+                <div>
+                    <h3>{{a.title}}</h3>
+                    <h4 class="description">Descrição:</h4>
+                    <p class="description">{{a.description}}</p>
+                    <span>Postado em:</span>
+                    <p>{{a.data}}</p>
+                </div>
+            </a>
+        {%endfor%}
+
+        <nav>
+            <h1>Top 5 Filmes</h1>
+        </nav>
+    </div>
+</body>
+</html>
